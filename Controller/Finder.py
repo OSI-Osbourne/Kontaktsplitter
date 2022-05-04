@@ -1,9 +1,9 @@
 from Models.Person import Person
 
-
-ADDRESS_FILE = "Models/address.txt"
 TITLES_FILE = "Models/titles.txt"
 EXTRAS_FILE = "Models/name_extras.txt"
+FEMALE_FILE = "Models/female_salutations.txt"
+MALE_FILE = "Models/male_salutations.txt"
 
 
 def load_list(file):
@@ -68,17 +68,27 @@ def find_titles(name):
     return titles
 
 
-def find(name):
-    # load knowing things
-    address_list = load_list(ADDRESS_FILE)
+def find_gender_and_salutation(salutation):
+    # load gender lists
+    female_list = load_list(FEMALE_FILE)
+    male_list = load_list(MALE_FILE)
 
+    # check first parameter for salutation - female
+    if salutation in female_list:
+        return salutation, 'weiblich'
+    elif salutation in male_list:
+        return salutation, 'männlich'
+    else:
+        return None, None
+
+
+def find(name):
     name = name.replace('\n', '')
     parts = name.split(' ')
     person = Person()
 
-    # check first parameter for addresses
-    if parts[0] in address_list:
-        person.salutation = parts[0]
+    person.salutation, person.gender = find_gender_and_salutation(parts[0])
+
     # find name parts
     person.prename, person.name, person.name_extra = find_names(parts)
     # find titles
