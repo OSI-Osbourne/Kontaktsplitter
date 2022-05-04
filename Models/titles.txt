@@ -1,0 +1,40 @@
+B.Eng.
+B.Sc.
+B.A.
+B.Ed.
+Dipl.-Betrw.
+Dipl.-Hist.
+Dipl.-Inform.
+Dipl.-Inform. (FH)
+Dipl.-Ing.
+Dipl.-Ing. (BA)
+Dipl.-Ing. (DH)
+Dipl.-Ing. (FH)
+Dipl.-Ing. (TU)
+Dipl.-Kfm.
+Dipl.-Math.
+Dipl.-Math. (FH)
+Dipl.-Oec.
+Dipl.-Phys.
+Dipl.-Wirtsch.-Inf.
+Dipl.-Wirtsch.-Inf. (DH)
+Dipl.-Wirtsch.-Inf. (FH)
+Dipl.-Wirt.-Ing.
+Dipl.-Wirt.-Ing. (FH)
+Dipl.-Wirtschaftsmath. Univ
+Dipl. Ing.
+Dr. rer. nat.
+Dr. h.c. mult.
+Dr.-Ing.
+Dr.-Ing. habil.
+Dr.
+MBA
+M.Eng.
+M.Sc.
+M.A.
+M.Ed.
+Prof.
+Prof. Dr.
+Prof. Dr.-Ing.
+Prof. Dr. rer. nat.
+Professor
