@@ -1,5 +1,9 @@
+from Controller import Finder
+
+
 def main():
-    return 0
+    print(str(Finder.find("Herr Dr. Osi Osbourne")))
+
 
 if __name__ == '__main__':
     main()
