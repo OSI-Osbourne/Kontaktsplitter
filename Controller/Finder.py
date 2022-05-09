@@ -14,6 +14,11 @@ def load_list(file):
     return list
 
 
+def save_list(output, file):
+    with open(file, 'w') as f:
+        f.writelines(output)
+
+
 def find_names(name_parts):
     # load extras list
     extras_list = load_list(EXTRAS_FILE)

@@ -1,6 +1,7 @@
 import sys
 from Controller import Finder
 from ui.MainWindow import Ui_MainWindow
+from ui.Dialog import Ui_Dialog as Form
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -11,12 +12,27 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.btnCancel.clicked.connect(self.close)
         self.btnRefreshInfo.clicked.connect(self.refresh)
         self.btnSplitContact.clicked.connect(self.split_contact)
+        self.actionTitel_bearbeiten.triggered.connect(self.open_dialog)
 
         self.toolBtnGender.clicked.connect(self.inoutGender.setReadOnly)
         self.toolBtnSalut.clicked.connect(self.inoutSalutation.setReadOnly)
         self.toolBtnTitles.clicked.connect(self.inoutTitle.setReadOnly)
         self.toolBtnFirstname.clicked.connect(self.inoutFirstname.setReadOnly)
         self.toolBtnLastname.clicked.connect(self.inoutLastname.setReadOnly)
+
+
+    def open_dialog(self):
+        dialog = QtWidgets.QDialog()
+        dialog.ui = Form()
+        dialog.ui.setupUi(dialog)
+        dialog.ui.load_data()
+        dialog.ui.btnCancel.clicked.connect(dialog.close)
+        dialog.ui.btnSave.clicked.connect(dialog.ui.save_data)
+        dialog.ui.btnSave.clicked.connect(dialog.close)
+        dialog.ui.btnNewRow.clicked.connect(dialog.ui.insert_row)
+        dialog.ui.btnDeleteRow.clicked.connect(dialog.ui.remove_row)
+        dialog.exec_()
+        dialog.show()
 
     def refresh(self):
         self.inputContact.setText("")
@@ -67,7 +83,7 @@ def main():
     window = MainWindow()
     window.show()
     app.exec()
-    print(str(Finder.find("Frau Sandra Berger")))
+    """print(str(Finder.find("Frau Sandra Berger")))
     print(str(Finder.find("Herr Dr. Sandro Gutmensch")))
     print(str(Finder.find("Professor Heinreich Freiherr vom Wald")))
     print(str(Finder.find("Mrs. Doreen Faber")))
@@ -77,7 +93,7 @@ def main():
     print(str(Finder.find("Herr Dipl. Ing. Max von Müller")))
     print(str(Finder.find("Dr. Russwurm, Winfried")))
     print(str(Finder.find("Dr. von Russwurm, Winfried")))
-    print(str(Finder.find("Herr Dr.-Ing. Dr. rer. nat. Dr. h.c. mult. Paul Steffens")))
+    print(str(Finder.find("Herr Dr.-Ing. Dr. rer. nat. Dr. h.c. mult. Paul Steffens")))"""
 
 
 if __name__ == '__main__':
