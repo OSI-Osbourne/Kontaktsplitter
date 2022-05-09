@@ -43,9 +43,19 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.inoutLastname.setText("")
         self.inoutGenSalutation.setText("")
 
+    def refresh_split(self):
+        self.inoutGender.setText("")
+        self.inoutSalutation.setText("")
+        self.inoutTitle.setText("")
+        self.inoutFirstname.setText("")
+        self.inoutLastname.setText("")
+        self.inoutGenSalutation.setText("")
+
     def split_contact(self):
         contact_info = self.inputContact.text()
         contact_dict = Finder.find(contact_info)
+
+        self.refresh_split()
 
         #set gender, salut and firstname
         if contact_dict.gender:
