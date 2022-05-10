@@ -20,6 +20,10 @@ def save_list(output, file):
 
 
 def find_names(name_parts):
+    # empty or invalid input
+    if len(name_parts) <= 1:
+        return None, None, None
+
     # load extras list
     extras_list = load_list(EXTRAS_FILE)
 
@@ -33,7 +37,7 @@ def find_names(name_parts):
 
         i = -3
         # iterate known name extras
-        while name_parts[i] in extras_list:
+        while i >= -len(name_parts) and name_parts[i] in extras_list:
             name_extra = name_parts[i] + ' ' + name_extra
             i -= 1
     else:
@@ -91,6 +95,9 @@ def find(name):
     name = name.replace('\n', '')
     parts = name.split(' ')
     person = Person()
+
+    if len(parts) == 1:
+        parts.append('')
 
     person.salutation, person.gender = find_gender_and_salutation(parts[0])
 
