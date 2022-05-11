@@ -9,9 +9,6 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-#from Controller.FrontendHelper import load_data, save_data, insert_row, remove_row
-
-#TITLES_FILE = "Models/titles.txt"
 
 
 class Ui_Dialog_Title(object):
@@ -84,35 +81,3 @@ class Ui_Dialog_Title(object):
         self.btnDeleteRow.setText(_translate("Dialog_Title", "Löschen"))
         self.btnSave.setText(_translate("Dialog_Title", "Speichern"))
         self.btnCancel.setText(_translate("Dialog_Title", "Abbrechen"))
-
-
-
-    """def load_data(self):
-        titles = load_list(TITLES_FILE)
-        self.tableWidget.setRowCount(len(titles))
-        row = 0
-        for title in titles:
-            if title != "":
-                self.tableWidget.setItem(row, 0, QtWidgets.QTableWidgetItem(title))
-                row += 1
-            else:
-                self.tableWidget.removeRow(row)
-
-    def save_data(self):
-        new_titles = []
-        rows = self.tableWidget.rowCount()
-        for row in range(rows):
-            try:
-                new_titles.append(self.tableWidget.item(row, 0).text() + '\n')
-            except:
-                pass
-        save_list(new_titles, TITLES_FILE)
-
-
-    def insert_row(self):
-        rows = self.tableWidget.rowCount()
-        self.tableWidget.insertRow(rows)
-
-    def remove_row(self):
-        curr_row = self.tableWidget.currentRow()
-        self.tableWidget.removeRow(curr_row)"""

@@ -1,9 +1,28 @@
 from PyQt5 import QtWidgets
-from Controller.Finder import load_list, save_list
+import json
 
 TITLES_FILE = "Models/titles.txt"
+EXTRAS_FILE = "Models/name_extras.txt"
 FEMALE_FILE = "Models/female_salutations.txt"
 MALE_FILE = "Models/male_salutations.txt"
+LETTER_ADDRESS_FILE = "Models/letter_address.json"
+
+def load_json(file):
+    with open(file) as f:
+        address_dict = json.load(f)
+    return address_dict
+
+def load_list(file):
+    list = []
+    with open(file) as f:
+        for line in f:
+            list.append(line.replace('\n', ''))
+    return list
+
+
+def save_list(output, file):
+    with open(file, 'w') as f:
+        f.writelines(output)
 
 def load_data(dialog, file):
     data = load_list(file)
@@ -34,6 +53,3 @@ def insert_row(dialog):
 def remove_row(dialog):
     curr_row = dialog.tableWidget.currentRow()
     dialog.tableWidget.removeRow(curr_row)
-
-def close_dialog(dialog):
-    dialog.close()

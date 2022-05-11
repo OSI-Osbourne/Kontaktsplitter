@@ -1,17 +1,17 @@
 {
-  "deutsch":
+  "german":
   [{"address": "Sehr geehrte Damen und Herren", "gender": "–"},
     {"address": "Sehr geehrter", "gender": "männlich"},
     {"address": "Sehr geehrte", "gender": "weiblich"}],
-  "englisch":
+  "english":
   [{"address": "Dear Sirs", "gender": "–"},
     {"address": "Dear", "gender": "männlich"},
     {"address": "Dear", "gender":  "weiblich"}],
-  "italienisch":
+  "italian":
   [{"address": "Egregi Signori", "gender": "–"},
-    {"address": "Gentile Signora", "gender": "weiblich"},
-    {"address":  "Egrego Signor", "gender": "männlich"}],
-  "französisch":
+    {"address": "Gentile", "gender": "weiblich"},
+    {"address":  "Egrego", "gender": "männlich"}],
+  "french":
   [{"address": "Messieurdames", "gender": "–"},
     {"address": "Madame", "gender": "weiblich"},
     {"address": "Monsieur", "gender": "männlich"}]

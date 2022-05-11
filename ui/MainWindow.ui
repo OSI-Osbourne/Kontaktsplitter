@@ -859,13 +859,13 @@
     <property name="title">
      <string>Bearbeiten</string>
     </property>
-    <addaction name="actionTitel_bearbeiten"/>
-    <addaction name="actionWeibliche_Anreden_bearbeiten"/>
-    <addaction name="actionMaennliche_Anreden_bearbeiten"/>
+    <addaction name="actionModify_Title"/>
+    <addaction name="actionModify_Female_Salut"/>
+    <addaction name="actionModify_Male_Salut"/>
    </widget>
    <addaction name="menuBearbeiten"/>
   </widget>
-  <action name="actionTitel_bearbeiten">
+  <action name="actionModify_Title">
    <property name="text">
     <string>Titel bearbeiten</string>
    </property>
@@ -875,7 +875,7 @@
     </font>
    </property>
   </action>
-  <action name="actionWeibliche_Anreden_bearbeiten">
+  <action name="actionModify_Female_Salut">
    <property name="text">
     <string>Weibliche Anreden bearbeiten</string>
    </property>
@@ -885,9 +885,19 @@
     </font>
    </property>
   </action>
-  <action name="actionMaennliche_Anreden_bearbeiten">
+  <action name="actionModify_Male_Salut">
    <property name="text">
     <string>Männliche Anreden bearbeiten</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionModify_Letter_Address">
+   <property name="text">
+    <string>Briefanrede bearbeiten</string>
    </property>
    <property name="font">
     <font>

@@ -1,23 +1,5 @@
 from Models.Person import Person
-
-TITLES_FILE = "Models/titles.txt"
-EXTRAS_FILE = "Models/name_extras.txt"
-FEMALE_FILE = "Models/female_salutations.txt"
-MALE_FILE = "Models/male_salutations.txt"
-
-
-def load_list(file):
-    list = []
-    with open(file) as f:
-        for line in f:
-            list.append(line.replace('\n', ''))
-    return list
-
-
-def save_list(output, file):
-    with open(file, 'w') as f:
-        f.writelines(output)
-
+from Controller.FrontendHelper import load_list, TITLES_FILE, FEMALE_FILE, MALE_FILE, EXTRAS_FILE
 
 def find_names(name_parts):
     # empty or invalid input
