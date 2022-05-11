@@ -51,9 +51,14 @@ def find_titles(name):
 
     # find all known titles
     titles = []
+    i = 0
     for title in title_list:
         if title in name:
-            titles.append(title)
+            if i == 0:
+                titles.append(title)
+                i+=1
+            else:
+                titles.append(' ' + title)
             name = name.replace(title, '')
 
     return titles

@@ -127,7 +127,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         #set titles
         if contact_dict.titles:
             for title in contact_dict.titles:
-                self.inoutTitle.setText(self.inoutTitle.text() + " " + title + " ")
+                self.inoutTitle.setText(self.inoutTitle.text() + "" + title + "")
         else:
             self.inoutTitle.setText("–")
 

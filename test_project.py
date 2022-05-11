@@ -133,7 +133,7 @@ class MyTestCase(unittest.TestCase):
         person = Finder.find('Herr Dr.-Ing. Dr. rer. nat. Dr. h.c. mult. Paul Steffens')
         self.assertEqual(person.gender, 'männlich')
         self.assertEqual(person.salutation, 'Herr')
-        self.assertEqual(person.titles, ['Dr. h.c. mult.', 'Dr. rer. nat.', 'Dr.-Ing.'])
+        self.assertEqual(person.titles, ['Dr. h.c. mult.', ' Dr. rer. nat.', ' Dr.-Ing.'])
         self.assertEqual(person.prename, 'Paul')
         self.assertEqual(person.name, 'Steffens')
         self.assertEqual(person.name_extra, None)
