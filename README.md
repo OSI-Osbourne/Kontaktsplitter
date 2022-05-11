@@ -5,7 +5,7 @@ Kontaktsplitter DHBW Prüfungsaufgabe
 
 ![](https://i.imgur.com/SdK5rur.png)
 
-Im Textfeld „Kontakt eingeben" ist der zu splittende Name einzutragen. Mit Betätigen der Schaltfläche „Kontakt zerlegen&quot wird die Eingabe im obigen Textfeld in die entsprechenden Teile zerlegt. Die einzelnen Ausgaben sind dabei in den Textfeldern in der Mitte zu finden. Im Beispiel mit „Herr Prof. Anton Müller" ist dies die Anrede „Herr", der Titel „Prof." sowie Vor- und Nachname.
+Im Textfeld „Kontakt eingeben" ist der zu splittende Name einzutragen. Mit Betätigen der Schaltfläche „Kontakt zerlegen" wird die Eingabe im obigen Textfeld in die entsprechenden Teile zerlegt. Die einzelnen Ausgaben sind dabei in den Textfeldern in der Mitte zu finden. Im Beispiel mit „Herr Prof. Anton Müller" ist dies die Anrede „Herr", der Titel „Prof." sowie Vor- und Nachname.
 Anmerkung: Bei vorhandener Anrede kann die Anwendung außerdem automatisch das Geschlecht auflösen und trägt dieses in das gekennzeichnete Textfeld ein.
 
 Mit der Schaltfläche „Zurücksetzen" können alle Text- und Eingabefelder auf ihren jeweiligen Ausgangswert zurückgesetzt werden. Die Schaltfläche „Abbrechen" beendet die Anwendung.
