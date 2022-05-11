@@ -1,5 +1,9 @@
 # Kontaktsplitter - Gruppe OSI Osbourne
 Kontaktsplitter DHBW Prüfungsaufgabe
+Mitglieder:
+- Kevin, Schock (kevin@osi-osbourne.de)
+- Nico, Riedlinger (nico@osi-osbourne.de)
+- Marius, Armbruster (marius@osi-osbourne.de)
 
 ## Kontaktdetails aufsplitten
 
