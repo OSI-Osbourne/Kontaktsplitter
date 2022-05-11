@@ -44,19 +44,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             if address["gender"] == gender:
                 suggested_address = address["address"]
                 break
-            else:
-                suggested_address = ""
-        if self.inoutSalutation.text() == "–":
+        if self.inoutGender.text() == "–":
             self.inoutGenSalutation.setText(suggested_address)
         elif self.inoutTitle.text() == "–":
-            self.inoutGenSalutation.setText(suggested_address + " " + self.inoutSalutation.text() + " " +
-                                            self.inoutLastname.text())
-        elif self.inoutSalutation == "M" or self.inoutSalutation == "Mme":
-            self.inoutGenSalutation.setText(suggested_address + " " + self.inoutTitle.text() + " " +
-                                            self.inoutLastname.text())
+            self.inoutGenSalutation.setText(suggested_address + " " + self.inoutLastname.text())
         else:
-            self.inoutGenSalutation.setText(suggested_address + " " + self.inoutSalutation.text() + " " +
-                                            self.inoutTitle.text() + " " + self.inoutLastname.text())
+            self.inoutGenSalutation.setText(suggested_address + self.inoutTitle.text() +
+                                            self.inoutLastname.text())
         print(suggested_address)
         print(self.inoutSalutation.text())
         print(self.inoutTitle.text())
