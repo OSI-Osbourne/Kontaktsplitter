@@ -49,7 +49,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         elif self.inoutTitle.text() == "–":
             self.inoutGenSalutation.setText(suggested_address + " " + self.inoutLastname.text())
         else:
-            self.inoutGenSalutation.setText(suggested_address + self.inoutTitle.text() +
+            self.inoutGenSalutation.setText(suggested_address + " " +  self.inoutTitle.text() + " " +
                                             self.inoutLastname.text())
         print(suggested_address)
         print(self.inoutSalutation.text())
