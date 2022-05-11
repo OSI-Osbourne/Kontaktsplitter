@@ -8,7 +8,7 @@ MALE_FILE = "Models/male_salutations.txt"
 LETTER_ADDRESS_FILE = "Models/letter_address.json"
 
 def load_json(file):
-    with open(file) as f:
+    with open(file, encoding='utf-8') as f:
         address_dict = json.load(f)
     return address_dict
 
