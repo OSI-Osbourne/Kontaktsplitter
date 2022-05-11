@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Dialog.ui'
+# Form implementation generated from reading ui file 'Dialog_Title.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -9,23 +9,23 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Controller.Finder import load_list, save_list
+#from Controller.FrontendHelper import load_data, save_data, insert_row, remove_row
 
-TITLES_FILE = "Models/titles.txt"
+#TITLES_FILE = "Models/titles.txt"
 
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(644, 480)
+class Ui_Dialog_Title(object):
+    def setupUi(self, Dialog_Title):
+        Dialog_Title.setObjectName("Dialog_Title")
+        Dialog_Title.resize(644, 480)
         font = QtGui.QFont()
         font.setPointSize(14)
-        Dialog.setFont(font)
-        self.gridLayout_2 = QtWidgets.QGridLayout(Dialog)
+        Dialog_Title.setFont(font)
+        self.gridLayout_2 = QtWidgets.QGridLayout(Dialog_Title)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setObjectName("gridLayout")
-        self.tableWidget = QtWidgets.QTableWidget(Dialog)
+        self.tableWidget = QtWidgets.QTableWidget(Dialog_Title)
         font = QtGui.QFont()
         font.setPointSize(14)
         self.tableWidget.setFont(font)
@@ -40,10 +40,10 @@ class Ui_Dialog(object):
         self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
-        self.btnNewRow = QtWidgets.QPushButton(Dialog)
+        self.btnNewRow = QtWidgets.QPushButton(Dialog_Title)
         self.btnNewRow.setObjectName("btnNewRow")
         self.verticalLayout.addWidget(self.btnNewRow)
-        self.btnDeleteRow = QtWidgets.QPushButton(Dialog)
+        self.btnDeleteRow = QtWidgets.QPushButton(Dialog_Title)
         self.btnDeleteRow.setObjectName("btnDeleteRow")
         self.verticalLayout.addWidget(self.btnDeleteRow)
         spacerItem = QtWidgets.QSpacerItem(20, 300, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
@@ -53,14 +53,14 @@ class Ui_Dialog(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         spacerItem1 = QtWidgets.QSpacerItem(150, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem1)
-        self.btnSave = QtWidgets.QPushButton(Dialog)
+        self.btnSave = QtWidgets.QPushButton(Dialog_Title)
         self.btnSave.setMinimumSize(QtCore.QSize(150, 50))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.btnSave.setFont(font)
         self.btnSave.setObjectName("btnSave")
         self.horizontalLayout.addWidget(self.btnSave)
-        self.btnCancel = QtWidgets.QPushButton(Dialog)
+        self.btnCancel = QtWidgets.QPushButton(Dialog_Title)
         self.btnCancel.setMinimumSize(QtCore.QSize(150, 50))
         font = QtGui.QFont()
         font.setPointSize(14)
@@ -71,21 +71,23 @@ class Ui_Dialog(object):
         self.horizontalLayout.addItem(spacerItem2)
         self.gridLayout_2.addLayout(self.horizontalLayout, 1, 0, 1, 2)
 
-        self.retranslateUi(Dialog)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(Dialog_Title)
+        QtCore.QMetaObject.connectSlotsByName(Dialog_Title)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, Dialog_Title):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Titel bearbeiten"))
+        Dialog_Title.setWindowTitle(_translate("Dialog_Title", "Titel bearbeiten"))
         self.tableWidget.setSortingEnabled(True)
         item = self.tableWidget.horizontalHeaderItem(0)
-        item.setText(_translate("Dialog", "Titel"))
-        self.btnNewRow.setText(_translate("Dialog", "Neu"))
-        self.btnDeleteRow.setText(_translate("Dialog", "Löschen"))
-        self.btnSave.setText(_translate("Dialog", "Speichern"))
-        self.btnCancel.setText(_translate("Dialog", "Abbrechen"))
+        item.setText(_translate("Dialog_Title", "Titel"))
+        self.btnNewRow.setText(_translate("Dialog_Title", "Neu"))
+        self.btnDeleteRow.setText(_translate("Dialog_Title", "Löschen"))
+        self.btnSave.setText(_translate("Dialog_Title", "Speichern"))
+        self.btnCancel.setText(_translate("Dialog_Title", "Abbrechen"))
 
-    def load_data(self):
+
+
+    """def load_data(self):
         titles = load_list(TITLES_FILE)
         self.tableWidget.setRowCount(len(titles))
         row = 0
@@ -113,4 +115,4 @@ class Ui_Dialog(object):
 
     def remove_row(self):
         curr_row = self.tableWidget.currentRow()
-        self.tableWidget.removeRow(curr_row)
+        self.tableWidget.removeRow(curr_row)"""

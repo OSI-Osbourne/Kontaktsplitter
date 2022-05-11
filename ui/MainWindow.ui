@@ -566,16 +566,6 @@
           <pointsize>14</pointsize>
          </font>
         </property>
-        <item>
-         <property name="text">
-          <string>Deutsch</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Englisch</string>
-         </property>
-        </item>
        </widget>
       </item>
       <item row="1" column="4">
@@ -870,12 +860,34 @@
      <string>Bearbeiten</string>
     </property>
     <addaction name="actionTitel_bearbeiten"/>
+    <addaction name="actionWeibliche_Anreden_bearbeiten"/>
+    <addaction name="actionMaennliche_Anreden_bearbeiten"/>
    </widget>
    <addaction name="menuBearbeiten"/>
   </widget>
   <action name="actionTitel_bearbeiten">
    <property name="text">
     <string>Titel bearbeiten</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionWeibliche_Anreden_bearbeiten">
+   <property name="text">
+    <string>Weibliche Anreden bearbeiten</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionMaennliche_Anreden_bearbeiten">
+   <property name="text">
+    <string>Männliche Anreden bearbeiten</string>
    </property>
    <property name="font">
     <font>
