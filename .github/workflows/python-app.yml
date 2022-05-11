@@ -3,8 +3,7 @@
 
 name: Run Python Tests
 
-on:
-  workflow_dispatch:
+on: push
 
 permissions:
   contents: read
