@@ -21,7 +21,7 @@ Durch Betätigen der Schaltfläche „Anrede generieren“ wird eine passende Br
 
 ## Gespeicherte Titel und Geschlechter bearbeiten
 
-![]<img width="635" alt="Bildschirmfoto 2022-05-12 um 23 48 14" src="https://user-images.githubusercontent.com/67455968/168173659-f88baf48-b9f8-4a37-b7aa-d83cef26d6e5.png">
+<img width="635" alt="Bildschirmfoto 2022-05-12 um 23 48 14" src="https://user-images.githubusercontent.com/67455968/168173659-f88baf48-b9f8-4a37-b7aa-d83cef26d6e5.png">
 
 
 Die Liste der Titel und Geschlechter, welche die Anwendung automatisch erkennt, kann bei Bedarf bearbeitet werden. Dazu ist über das Menü die Schaltfläche „Bearbeiten -> Titel Bearbeiten“ oder „Bearbeiten -> Weibliche bzw. Männliche Anreden bearbeiten“ zu wählen. Dadurch wird ein neues Fenster mit einer Tabelle aufgerufen. Hier können bereits bestehende Titel oder Geschlechter mit einem Doppelklick bearbeitet werden. Durch Betätigen der Schaltfläche „Neu“ ist ein neuer Tabelleneintrag hinzuzufügen. Durch Betätigen der Schaltfläche „Löschen“ ist ein bestehender zu entfernen. Mit „Speichern“ wird die neue Titel-Liste persistent gespeichert. Bei der Bearbeitung eines bestehenden Eintrags muss die Änderung durch drücken der "Enter-Taste" bestätigt werden, bevor diese über die Schaltfläche "Speichern" gespeichert werden können.
