@@ -2,6 +2,7 @@ from PyQt5 import QtWidgets
 from Build.build import resource_path
 import json
 
+# For local use without .exe please use commented file section
 TITLES_FILE = resource_path("Models/titles.txt")
 EXTRAS_FILE = resource_path("Models/name_extras.txt")
 FEMALE_FILE = resource_path("Models/female_salutations.txt")
@@ -14,10 +15,12 @@ FEMALE_FILE = "Models/female_salutations.txt"
 MALE_FILE = "Models/male_salutations.txt"
 LETTER_ADDRESS_FILE = "Models/letter_address.json"""""
 
+
 def load_json(file):
     with open(file, encoding='utf-8') as f:
         address_dict = json.load(f)
     return address_dict
+
 
 # Load .txt into list for split and gui
 def load_list(file):
@@ -27,10 +30,12 @@ def load_list(file):
             list.append(line.replace('\n', ''))
     return list
 
+
 # Save list to .txt for gui
 def save_list(output, file):
     with open(file, 'w') as f:
         f.writelines(output)
+
 
 # Load list into corresponding gui dialog
 def load_data(dialog, file):
@@ -43,6 +48,7 @@ def load_data(dialog, file):
             row += 1
         else:
             dialog.tableWidget.removeRow(row)
+
 
 # Save new list of gui dialog into .txt
 def save_data(dialog, file):
@@ -59,6 +65,7 @@ def save_data(dialog, file):
 def insert_row(dialog):
     rows = dialog.tableWidget.rowCount()
     dialog.tableWidget.insertRow(rows)
+
 
 def remove_row(dialog):
     curr_row = dialog.tableWidget.currentRow()

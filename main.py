@@ -7,6 +7,7 @@ from ui.Dialog_Male_Salut import Ui_Dialog_Male_Salut as Form_Male_Salut
 from PyQt5 import QtCore, QtGui, QtWidgets
 from functools import partial
 
+# Setup gui for main window and initialize frontend elements
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
@@ -28,6 +29,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.toolBtnFirstname.clicked.connect(self.inoutFirstname.setReadOnly)
         self.toolBtnLastname.clicked.connect(self.inoutLastname.setReadOnly)
 
+    # Load address json into gui combobox
     def fill_combo(self, file):
         global address_dict
         address_dict = FrontendHelper.load_json(file)
@@ -51,13 +53,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         else:
             self.inoutGenSalutation.setText(suggested_address + " " +  self.inoutTitle.text() + " " +
                                             self.inoutLastname.text())
-        print(suggested_address)
-        print(self.inoutSalutation.text())
-        print(self.inoutTitle.text())
-        print(self.inoutLastname.text())
-        print(self.inoutGenSalutation.text())
 
-
+    # Setup corresponding gui dialog and initialize dialog elements
     def open_dialog(self, form, file):
         app = QtWidgets.QDialog()
         app.ui = form()
@@ -94,7 +91,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.refresh_split()
 
-        #set gender, salut and firstname
+        # Set gender, salut and firstname
         if contact_dict.gender:
             self.inoutGender.setText(contact_dict.gender)
         else:
@@ -110,7 +107,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         else:
             self.inoutFirstname.setText("–")
 
-        #set lastname depending on extra
+        # Set lastname depending on extra
         if contact_dict.name_extra:
             self.inoutLastname.setText(contact_dict.name_extra + " " + contact_dict.name)
         elif contact_dict.name and not contact_dict.name_extra:
@@ -118,12 +115,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         else:
             self.inoutLastname.setText("–")
 
-        #set titles
+        # Set titles
         if contact_dict.titles:
             for title in contact_dict.titles:
                 self.inoutTitle.setText(self.inoutTitle.text() + "" + title + "")
         else:
             self.inoutTitle.setText("–")
+
 
 def main():
     app = QtWidgets.QApplication(sys.argv)

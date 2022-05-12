@@ -1,9 +1,9 @@
 # Pycache files
 *.pyc
 
-#safety copies
+# Safety copies
 copy
 
+# Output folders for .exe generation
 output
-
 output.zip

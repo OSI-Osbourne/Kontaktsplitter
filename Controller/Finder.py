@@ -1,6 +1,7 @@
 from Models.Person import Person
 from Controller.FrontendHelper import load_list, TITLES_FILE, FEMALE_FILE, MALE_FILE, EXTRAS_FILE
 
+
 def find_names(name_parts):
     # empty or invalid input
     if len(name_parts) <= 1:
