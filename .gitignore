@@ -1,0 +1,34 @@
+# Pycache files
+*.pyc
+
+# Safety copies
+copy
+
+# Output folders for .exe generation
+output
+output.zip
+
+# Office files
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+*.tmp
+
+# Word temporary
+~$*.doc*
+~$*.doxc*
+
+# Excel temporary
+~$*.xls*
+~$*.xlsx*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*
+~$*.pptx*
